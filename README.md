@@ -101,10 +101,13 @@ You Created. --> Save.
 
 # 10) Validate your cluster(KOPS will take some time to create cluster ,Execute below commond after 3 or 4 mins)
        kops export kubeconfig --admin
-       before validate
+       after  validate
 	   kops validate cluster
 
-# 11) connect to the master node
+kops export kubecfg $NAME --admin
+to run your kublet in your kops 
+ 
+ # 11) connect to the master node
     sh -i ~/.ssh/id_rsa ubuntu@ipAddress
     ssh -i ~/.ssh/id_rsa ubuntu@3.90.203.23
 # 11) To list nodes
